@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.TextFlow?>
+
+<VBox fx:id="" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="309.0" prefWidth="553.0"
+   xmlns="http://javafx.com/javafx/8"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="xruisu.project.equipmentforge.Controller">
+   <children>
+      <Pane prefHeight="60.0" prefWidth="455.0">
+         <children>
+            <Label contentDisplay="CENTER" focusTraversable="false" prefHeight="28.0" prefWidth="323.0" text="Equipment Forge" textAlignment="CENTER">
+               <font>
+                  <Font name="MedievalSharp" size="18.0" />
+               </font>
+               <padding>
+                  <Insets bottom="2.0" left="5.0" />
+               </padding>
+            </Label>
+            <Label focusTraversable="false" layoutX="411.0" layoutY="2.0" prefHeight="25.0" prefWidth="113.0" text="Status:">
+               <font>
+                  <Font name="MedievalSharp" size="18.0" />
+               </font>
+            </Label>
+         </children>
+         <VBox.margin>
+            <Insets />
+         </VBox.margin>
+      </Pane>
+      <SplitPane dividerPositions="0.2582781456953642, 0.7439293598233996" prefHeight="284.0" prefWidth="455.0">
+         <items>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <Accordion prefHeight="243.0" prefWidth="138.0">
+                     <panes>
+                        <TitledPane fx:id="paneOne" animated="true" focusTraversable="false" text="SET 1">
+                           <content>
+                              <AnchorPane fx:id="setOne" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="paneTwo" animated="true" focusTraversable="false" text="SET 2">
+                           <content>
+                              <AnchorPane fx:id="setTwo" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="paneThree" animated="true" focusTraversable="false" text="SET 3">
+                           <content>
+                              <AnchorPane fx:id="setThree" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                        <TitledPane fx:id="paneFour" animated="true" focusTraversable="false" layoutX="10.0" layoutY="60.0" text="SET 4">
+                           <content>
+                              <AnchorPane fx:id="setFour" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+            </AnchorPane>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <TextFlow fx:id="console" layoutX="4.0" prefHeight="223.0" prefWidth="255.0" />
+                  <TextField fx:id="input" layoutX="4.0" layoutY="222.0" prefHeight="15.0" prefWidth="255.0" />
+               </children>
+            </AnchorPane>
+            <AnchorPane prefHeight="158.0" prefWidth="331.0">
+               <children>
+                  <TextFlow layoutX="-20.0" prefHeight="200.0" prefWidth="55.0" />
+                  <TextFlow layoutX="3.0" layoutY="4.0" prefHeight="243.0" prefWidth="107.0" />
+               </children>
+            </AnchorPane>
+         </items>
+      </SplitPane>
+      <HBox id="HBox" alignment="CENTER_LEFT" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="13.0" prefWidth="553.0" spacing="5.0" VBox.vgrow="NEVER">
+         <padding>
+            <Insets bottom="3.0" left="3.0" right="3.0" top="3.0" />
+         </padding>
+         <children>
+            <Label alignment="CENTER" focusTraversable="false" prefHeight="27.0" prefWidth="113.0" text="Total Forged:">
+               <font>
+                  <Font name="MedievalSharp" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="totalCount" alignment="CENTER" focusTraversable="false" prefHeight="27.0" prefWidth="15.0" text="0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</VBox>
