@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.TextFlow?>
+
+<Pane fx:id="document" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="766.0" prefWidth="800.0"
+   xmlns="http://javafx.com/javafx/23.0.1"
+   xmlns:fx="http://javafx.com/fxml/1" fx:controller="xruisu.project.equipmentforge">
+   <children>
+      <VBox prefHeight="766.0" prefWidth="800.0" style="-fx-background-color: BLACK;">
+         <children>
+            <ScrollPane prefHeight="755.0" prefWidth="800.0">
+               <content>
+                  <TextFlow fx:id="mainText" prefHeight="2150.0" prefWidth="785.0" />
+               </content>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ScrollPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>

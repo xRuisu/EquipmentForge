@@ -35,6 +35,7 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Accordion?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.SplitPane?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.control.TitledPane?>
@@ -45,7 +46,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox fx:id="" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="309.0" prefWidth="553.0"
+<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="309.0" prefWidth="553.0"
    xmlns="http://javafx.com/javafx/8"
    xmlns:fx="http://javafx.com/fxml/1" fx:controller="xruisu.project.equipmentforge.Controller">
    <children>
@@ -59,7 +60,7 @@
                   <Insets bottom="2.0" left="5.0" />
                </padding>
             </Label>
-            <Label focusTraversable="false" layoutX="411.0" layoutY="2.0" prefHeight="25.0" prefWidth="113.0" text="Status:">
+            <Label focusTraversable="false" layoutX="411.0" layoutY="2.0" prefHeight="25.0" prefWidth="113.0" text="Properties">
                <font>
                   <Font name="MedievalSharp" size="18.0" />
                </font>
@@ -77,22 +78,38 @@
                      <panes>
                         <TitledPane fx:id="paneOne" animated="true" focusTraversable="false" text="SET 1">
                            <content>
-                              <AnchorPane fx:id="setOne" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="setOne" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextFlow fx:id="setOneFlow" layoutY="3.0" prefHeight="141.0" prefWidth="123.0" />
+                                 </children>
+                              </AnchorPane>
                            </content>
                         </TitledPane>
                         <TitledPane fx:id="paneTwo" animated="true" focusTraversable="false" text="SET 2">
                            <content>
-                              <AnchorPane fx:id="setTwo" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="setTwo" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextFlow fx:id="setTwoFlow" layoutY="-2.0" prefHeight="145.0" prefWidth="123.0" />
+                                 </children>
+                              </AnchorPane>
                            </content>
                         </TitledPane>
                         <TitledPane fx:id="paneThree" animated="true" focusTraversable="false" text="SET 3">
                            <content>
-                              <AnchorPane fx:id="setThree" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="setThree" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextFlow fx:id="setThreeFlow" layoutX="-1.0" layoutY="1.0" prefHeight="141.0" prefWidth="123.0" />
+                                 </children>
+                              </AnchorPane>
                            </content>
                         </TitledPane>
                         <TitledPane fx:id="paneFour" animated="true" focusTraversable="false" layoutX="10.0" layoutY="60.0" text="SET 4">
                            <content>
-                              <AnchorPane fx:id="setFour" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                              <AnchorPane fx:id="setFour" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextFlow fx:id="setFourFlow" layoutX="-1.0" layoutY="-3.0" prefHeight="146.0" prefWidth="123.0" />
+                                 </children>
+                              </AnchorPane>
                            </content>
                         </TitledPane>
                      </panes>
@@ -101,14 +118,31 @@
             </AnchorPane>
             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
                <children>
-                  <TextFlow fx:id="console" layoutX="4.0" prefHeight="223.0" prefWidth="255.0" />
+                  <ScrollPane prefHeight="223.0" prefWidth="247.0">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="246.0">
+                           <children>
+                              <TextFlow fx:id="console" prefHeight="223.0" prefWidth="255.0" />
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </ScrollPane>
                   <TextField fx:id="input" layoutX="4.0" layoutY="222.0" prefHeight="15.0" prefWidth="255.0" />
                </children>
             </AnchorPane>
             <AnchorPane prefHeight="158.0" prefWidth="331.0">
                <children>
-                  <TextFlow layoutX="-20.0" prefHeight="200.0" prefWidth="55.0" />
-                  <TextFlow layoutX="3.0" layoutY="4.0" prefHeight="243.0" prefWidth="107.0" />
+                  <VBox prefHeight="248.0" prefWidth="169.0">
+                     <children>
+                        <TextField fx:id="setOneField" promptText="SET 1 NAME" />
+                        <TextField fx:id="setTwoField" promptText="SET 2 NAME" />
+                        <TextField fx:id="setThreeField" promptText="SET 3 NAME" />
+                        <TextField fx:id="setFourField" layoutX="10.0" layoutY="60.0" promptText="SET 4 NAME" />
+                        <TextField fx:id="setManagerField" layoutX="10.0" layoutY="85.0" promptText="MANAGER" />
+                        <TextField fx:id="setOrgField" layoutX="10.0" layoutY="110.0" promptText="ORG" />
+                        <TextField fx:id="setSortDateField" layoutX="10.0" layoutY="135.0" promptText="SORT DATE" />
+                     </children>
+                  </VBox>
                </children>
             </AnchorPane>
          </items>
