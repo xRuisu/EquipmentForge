@@ -46,9 +46,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.TextFlow?>
 
-<VBox maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="309.0" prefWidth="553.0"
-   xmlns="http://javafx.com/javafx/8"
-   xmlns:fx="http://javafx.com/fxml/1" fx:controller="xruisu.project.equipmentforge.Controller">
+<VBox fx:id="scene" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="309.0" prefWidth="553.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="xruisu.project.equipmentforge.Controller">
    <children>
       <Pane prefHeight="60.0" prefWidth="455.0">
          <children>
@@ -138,9 +136,11 @@
                         <TextField fx:id="setTwoField" promptText="SET 2 NAME" />
                         <TextField fx:id="setThreeField" promptText="SET 3 NAME" />
                         <TextField fx:id="setFourField" layoutX="10.0" layoutY="60.0" promptText="SET 4 NAME" />
-                        <TextField fx:id="setManagerField" layoutX="10.0" layoutY="85.0" promptText="MANAGER" />
+                        <TextField fx:id="setManagerField" layoutX="10.0" layoutY="85.0" promptText="MANAGER">
+                           <VBox.margin>
+                              <Insets top="30.0" />
+                           </VBox.margin></TextField>
                         <TextField fx:id="setOrgField" layoutX="10.0" layoutY="110.0" promptText="ORG" />
-                        <TextField fx:id="setSortDateField" layoutX="10.0" layoutY="135.0" promptText="SORT DATE" />
                      </children>
                   </VBox>
                </children>
@@ -157,7 +157,7 @@
                   <Font name="MedievalSharp" size="18.0" />
                </font>
             </Label>
-            <Label fx:id="totalCount" alignment="CENTER" focusTraversable="false" prefHeight="27.0" prefWidth="15.0" text="0">
+            <Label fx:id="totalCount" alignment="CENTER" focusTraversable="false" prefHeight="27.0" prefWidth="72.0" text="0">
                <font>
                   <Font size="18.0" />
                </font>

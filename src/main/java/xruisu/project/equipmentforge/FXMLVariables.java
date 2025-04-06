@@ -6,6 +6,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.text.TextFlow;
 
 public class FXMLVariables {
@@ -21,9 +22,7 @@ public class FXMLVariables {
     @FXML
     public TextFlow setFourFlow;
     @FXML
-    public TextFlow mainText;
-    @FXML
-    public Pane document;
+    public VBox scene;
 
     @FXML
     TextField setOneField;
@@ -56,8 +55,6 @@ public class FXMLVariables {
     public TextField setManagerField;
     @FXML
     public TextField setOrgField;
-    @FXML
-    public TextField setSortDateField;
     @FXML
     public TextFlow console;
     @FXML
