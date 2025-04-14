@@ -221,6 +221,12 @@ public class ForgeHandler extends FXMLVariables {
         setThreeCount.setText("0");
         setFourCount.setText("0");
 
+        DocHandler.totalCount = 0;
+        DocHandler.setOneCount = 0;
+        DocHandler.setTwoCount = 0;
+        DocHandler.setThreeCount = 0;
+        DocHandler.setFourCount = 0;
+
         setNum = 0;
 
         console().add(new Text("Document data cleared.\n"));
