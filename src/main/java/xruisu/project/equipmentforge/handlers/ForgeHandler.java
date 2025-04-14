@@ -131,7 +131,7 @@ public class ForgeHandler extends FXMLVariables {
             setOneFlow.getChildren().add(new Text(userScanInput + "\n"));
             DocHandler.appendToConsole(" 🛠 " + userScanInput + "\n");
             DocHandler.getSetOneList().append(" 🛠 " + userScanInput + "\n");
-            DocHandler.appendToFirstSet("【 " + paneOne.getText() + "】 🛠" + userScanInput
+            DocHandler.appendToFirstSet("【" + paneOne.getText() + "】 🛠" + userScanInput
                     + "__ Employee:____________ Returned:___ Comments:_____________" + "\n");
         } else if (setNum == 2) {
             animateHammer();
@@ -143,7 +143,7 @@ public class ForgeHandler extends FXMLVariables {
             DocHandler.appendToConsole(" 🛠 " + userScanInput + "\n");
             DocHandler.getSetTwoList().append(" 🛠 " + userScanInput + "\n");
             setTwoFlow.getChildren().add(new Text(userScanInput + "\n"));
-            DocHandler.appendToSecondSet("【 " + paneTwo.getText() + "】 🛠" + userScanInput
+            DocHandler.appendToSecondSet("【" + paneTwo.getText() + "】 🛠" + userScanInput
                     + "__ Employee:____________ Returned:___ Comments:_____________" + "\n");
         } else if (setNum == 3) {
             animateHammer();
@@ -155,7 +155,7 @@ public class ForgeHandler extends FXMLVariables {
             DocHandler.appendToConsole(" 🛠 " + userScanInput + "\n");
             DocHandler.getSetThreeList().append(" 🛠 " + userScanInput + "\n");
             setThreeFlow.getChildren().add(new Text(userScanInput + "\n"));
-            DocHandler.appendToThirdSet("【 " + paneThree.getText() + "】 🛠" + userScanInput
+            DocHandler.appendToThirdSet("【" + paneThree.getText() + "】 🛠" + userScanInput
                     + "__ Employee:____________ Returned:___ Comments:_____________" + "\n");
         } else if (setNum == 4) {
             animateHammer();
@@ -167,7 +167,7 @@ public class ForgeHandler extends FXMLVariables {
             DocHandler.appendToConsole(" 🛠 " + userScanInput + "\n");
             DocHandler.getSetFourList().append(" 🛠 " + userScanInput + "\n");
             setFourFlow.getChildren().add(new Text(userScanInput + "\n"));
-            DocHandler.appendToFourthSet("【 " + paneFour.getText() + "】 🛠" + userScanInput
+            DocHandler.appendToFourthSet("【" + paneFour.getText() + "】 🛠" + userScanInput
                     + "__ Employee:____________ Returned:___ Comments:_____________" + "\n");
         }
     }
@@ -351,7 +351,7 @@ public class ForgeHandler extends FXMLVariables {
                         .append(DocHandler.getSetTwoDocument().append(barline()))
                         .append(DocHandler.getSetThreeDocument().append(barline())
                                 .append(DocHandler.getSetFourDocument().append(barline()))
-                                .append("\nEQUIPMENT SIGN OFF:_______________________")));
+                                .append("\nEQUIPMENT SIGN OFF:____________________________")));
 
         String[] lines = DocHandler.getDocument().toString().split("\n");
 
@@ -373,7 +373,7 @@ public class ForgeHandler extends FXMLVariables {
                 while (lineIndex < lines.length) {
                     String linesGot = lines[lineIndex].trim() + "\n";
                     Text line = new Text(linesGot);
-                    line.setFont(Font.font("Times New Roman", 10));
+                    line.setFont(Font.font("Times New Roman", 11));
 
                     textFlow.getChildren().add(line);
                     textFlow.applyCss();
