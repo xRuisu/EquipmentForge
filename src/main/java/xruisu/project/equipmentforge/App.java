@@ -6,6 +6,7 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class App extends Application {
@@ -16,6 +17,11 @@ public class App extends Application {
     public void start(Stage stage) throws IOException {
         scene = new Scene(loadFXML("/Forge"));
 
+        stage.getIcons().addAll(
+                new Image(getClass().getResource("/images/anvilhammer256.png").toExternalForm()),
+                new Image(getClass().getResource("/images/anvilhammer32.png").toExternalForm()),
+                new Image(getClass().getResource("/images/anvilhammer48.png").toExternalForm()),
+                new Image(getClass().getResource("/images/anvilhammer16.png").toExternalForm()));
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();

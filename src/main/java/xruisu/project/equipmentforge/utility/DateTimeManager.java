@@ -1,4 +1,4 @@
-package xruisu.project.equipmentforge;
+package xruisu.project.equipmentforge.utility;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
