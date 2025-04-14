@@ -30,7 +30,7 @@ if [ "$PROFILE" == "java-21" ]; then
         --type exe \
         --dest "equipmentforge-installer" \
         --icon "target/classes/assets/images/equipmentforge/equipmentforge-icon.ico" \
-        --app-version "1.2.3" \
+        --app-version "1.2.4" \
         --win-shortcut \
         --win-menu \
         --description "Data Solutions Made Easier" \
