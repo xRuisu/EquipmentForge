@@ -25,12 +25,12 @@ if [ "$PROFILE" == "java-21" ]; then
     jpackage \
         --input "target/" \
         --name "equipmentforge" \
-        --main-jar "xruisu-equipmentforge-0.9.0-BETA-21.0.5-shaded.jar" \
-        --main-class "xruisu.project.equipmentforge.app.Run" \
+        --main-jar "EquipmentForge.jar" \
+        --main-class "xruisu.project.equipmentforge.App" \
         --type exe \
         --dest "equipmentforge-installer" \
         --icon "target/classes/assets/images/equipmentforge/equipmentforge-icon.ico" \
-        --app-version "0.9.0" \
+        --app-version "1.2.3" \
         --win-shortcut \
         --win-menu \
         --description "Data Solutions Made Easier" \

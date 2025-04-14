@@ -4,7 +4,7 @@
 
     <groupId>xruisu.project.equipmentforge</groupId>
     <artifactId>xruisu-equipmentforge</artifactId>
-    <version>0.9.0-BETA</version>
+    <version>1.2.3-BETA</version>
     <packaging>jar</packaging>
     <properties>
         <!-- Set current project version -->
@@ -49,7 +49,7 @@
                                 </includes>
                             </artifactSet>
                             <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <shadedClassifierName>${java.version}-shaded</shadedClassifierName>
+                            <shadedClassifierName>shaded</shadedClassifierName>
                         </configuration>
                     </execution>
                 </executions>
