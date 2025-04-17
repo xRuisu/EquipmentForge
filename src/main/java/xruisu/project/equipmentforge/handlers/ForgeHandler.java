@@ -406,10 +406,10 @@ public class ForgeHandler extends FXMLVariables {
 
     private void callWarningDialog() {
         Alert alert = new Alert(AlertType.INFORMATION);
-        alert.setTitle("No Available Document Found");
-        alert.setHeaderText("Status: Missing Document");
+        alert.setTitle("Printers Not Found");
+        alert.setHeaderText("Status: No available printer.");
         alert.setContentText(
-                " No document was generated or found❗\n Please generate a document before trying to print.");
+                "Printer job is unavailable, no printer was found to print document.");
         alert.showAndWait();
     }
 
