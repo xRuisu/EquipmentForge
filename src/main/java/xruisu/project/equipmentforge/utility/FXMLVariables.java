@@ -3,6 +3,7 @@ package xruisu.project.equipmentforge.utility;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TitledPane;
 import javafx.scene.image.ImageView;
@@ -46,6 +47,12 @@ public class FXMLVariables {
     public Button setThreeButton;
     @FXML
     public Button setFourButton;
+    @FXML
+    public MenuItem print;
+    @FXML
+    public MenuItem export;
+    @FXML
+    public MenuItem format;
 
     // LABELS
     @FXML

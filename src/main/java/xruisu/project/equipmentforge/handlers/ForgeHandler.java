@@ -1,5 +1,8 @@
 package xruisu.project.equipmentforge.handlers;
 
+import java.io.File;
+import java.io.FileOutputStream;
+
 import javafx.animation.RotateTransition;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
@@ -16,6 +19,10 @@ import xruisu.project.equipmentforge.utility.DateTimeManager;
 import xruisu.project.equipmentforge.utility.FXMLVariables;
 
 public class ForgeHandler extends FXMLVariables {
+
+    private static final String FOLDER_PATH = System.getProperty("user.home") + "\\Desktop/";
+    private static final String FILE_NAME = "EquipmentSheet.txt";
+    private static final String FILE_PATH = FOLDER_PATH + FILE_NAME;
 
     private static Font CINZEL_REGULAR;
     private int setNum = 0;
@@ -77,10 +84,16 @@ public class ForgeHandler extends FXMLVariables {
             paneFour.setText(setFourField.getText().toUpperCase());
         });
 
+        format.setOnAction(actionEvent -> {
+            format();
+        });
+
         importFonts();
         setTitleFont();
         setFonts();
         handleDate();
+        print();
+        export();
         handleManagerOrg();
         handleSetOne();
         handleSetTwo();
@@ -182,6 +195,7 @@ public class ForgeHandler extends FXMLVariables {
     }
 
     private void format() {
+
         input.clear();
         console().clear();
         DocHandler.getDocument().setLength(0);
@@ -230,6 +244,50 @@ public class ForgeHandler extends FXMLVariables {
         setNum = 0;
 
         console().add(new Text("Document data cleared.\n"));
+    }
+
+    private void print() {
+        print.setOnAction(actionEvent -> {
+            handlePrint();
+        });
+    }
+
+    private void export() {
+        export.setOnAction(actionEvent -> {
+            try {
+                File folder = new File(FOLDER_PATH);
+                if (!folder.exists() && !folder.mkdirs()) {
+                    console().clear();
+                    console().add(
+                            new Text("Failed to create directory: " + FOLDER_PATH));
+                    return;
+                }
+
+                File file = new File(FILE_PATH);
+                if (file.createNewFile()) {
+                    console().clear();
+                    console().add(
+                            new Text("File create successfully"));
+                }
+                DocHandler.getDocument()
+                        .append(DocHandler.getHeading().append(barline())
+                                .append(DocHandler.getSetOneDocument().append(barline()))
+                                .append(DocHandler.getSetTwoDocument().append(barline()))
+                                .append(DocHandler.getSetThreeDocument().append(barline())
+                                        .append(DocHandler.getSetFourDocument().append(barline()))
+                                        .append("\nEQUIPMENT SIGN OFF:____________________________")));
+
+                try (FileOutputStream fos = new FileOutputStream(file)) {
+                    byte[] fileData = DocHandler.getDocument().toString().getBytes("UTF-8");
+                    fos.write(fileData);
+                    console().clear();
+                    console().add(
+                            new Text("EquipmentSheet created successfully"));
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
     }
 
     private void showHelp() {
@@ -401,7 +459,6 @@ public class ForgeHandler extends FXMLVariables {
                 System.out.println("[Equipment Forge] Printing failed.");
             }
         }
-        format();
     }
 
     private void callWarningDialog() {
