@@ -42,6 +42,12 @@ release.properties
 
 # Non-essential or generated resources
 *.css.map
+bin/
+.settings/org.eclipse.jdt.core.prefs
+.settings/org.eclipse.m2e.core.prefs
+.settings/org.eclipse.core.resources.prefs
+.project
+.classpath
 
 # Documentation and Markdown files (always include)
 !*.md
