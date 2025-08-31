@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css\styles.css" />
+    <link rel="stylesheet" href="css\normalize.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <title>Equipment Forge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body class="body--bg">
+    <header>
+      <h1 class=".title">🛠 Equipment Forge</h1>
+      <div class="meta">
+        <input id="operator" placeholder="Manager" />
+        <input id="location" placeholder="Location / Station / Org" />
+        <input id="date" type="date" />
+      </div>
+    </header>
+    <div class="wrap">
+      <section class="card">
+        <div class="set-picker" id="setPicker"></div>
+      </section>
+      <section class="card entry">
+        <input id="idInput" placeholder="Scan or type ID…" autocomplete="off" />
+        <button id="addBtn">Add (Enter)</button>
+        <button
+          id="clearCurrentBtn"
+          class="secondary"
+          title="Clear current set only"
+        >
+          Clear Current
+        </button>
+        <button id="clearAllBtn" class="secondary" title="Clear all sets">
+          Clear All
+        </button>
+      </section>
+      <section class="stats">
+        <div class="stat">
+          <div class="label">PRINTER</div>
+          <div class="value" id="count1">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">PHASAR</div>
+          <div class="value" id="count2">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">RADIO</div>
+          <div class="value" id="count3">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">SCANNER</div>
+          <div class="value" id="count4">0</div>
+        </div>
+        <div class="stat">
+          <div class="label">TOTAL</div>
+          <div class="value" id="totalCount">0</div>
+        </div>
+      </section>
+      <section class="table-wrap">
+        <table id="dataTable">
+          <thead>
+            <tr>
+              <th style="width: 120px">Set</th>
+              <th>ID</th>
+              <th style="width: 110px">Actions</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </section>
+      <section class="card io">
+        <button id="printBtn" class="primary">Print Sheet</button>
+        <button id="exportBtn">Export JSON</button>
+        <label
+          >Import JSON<input
+            type="file"
+            id="importInput"
+            accept="application/json"
+        /></label>
+      </section>
+    </div>
+
+    <!-- Print-only section -->
+    <section id="printSheet">
+      <div id="ps-header" class="card">
+        <div>
+          <label>Manager<br /><input id="ps-operator" /></label>
+        </div>
+        <div>
+          <label>Location / Date <br /><input id="ps-dateLoc" /></label>
+        </div>
+      </div>
+      <div id="ps-grid"></div>
+      <div class="ps-footer">
+        <div>
+          <h3>🛠 Post-Sort Equipment Check:</h3>
+          <i
+            >Equipment has been collected, checked, and upon signing off will be
+            returned.</i
+          >
+          <h4>
+            Equipment Sign Off__________________________________________________
+          </h4>
+          <br />
+          <br />
+          Total Equipment Logged: <span id="ps-total">0</span>
+        </div>
+      </div>
+    </section>
+    <script src="javascript\main.js"></script>
+  </body>
+</html>
