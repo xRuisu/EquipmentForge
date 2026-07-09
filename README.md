@@ -70,3 +70,6 @@ Potential future improvements include:
 ## About
 
 Equipment Forge is a practical software project built from a real workplace need. It reflects my interest in creating tools that automate repetitive tasks, improve workflow accuracy, and make everyday operations more efficient.
+
+## Preview
+<img width="1718" height="1080" alt="Screenshot 2026-07-08 193916" src="https://github.com/user-attachments/assets/67b3f328-c20e-4b5c-b6f9-8d346de5efbf" />
